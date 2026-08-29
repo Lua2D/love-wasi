@@ -128,6 +128,9 @@ jobs:
       - name: first full main.lua frame (step 6.6b)
         run: PREFIX="$PWD/wasi-eh" wasi/platform/run-frame.sh
 
+      - name: love.shim — Lua 5.1 + LÖVE 11.5 restorations (D21, #64)
+        run: PREFIX="$PWD/wasi-eh" wasi/shim/run.sh
+
       - name: union real game (pre-step-7 capstone)
         run: PREFIX="$PWD/wasi-eh" wasi/platform/run-game.sh
 
